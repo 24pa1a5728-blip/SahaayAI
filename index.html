@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SahaayAI — Voice-First Rural Welfare Assistant</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandRed: '#C00000',
+              brandRedDark: '#990000',
+              brandOrange: '#F26A2A',
+              brandLightGrey: '#F1F1F1',
+              brandGreen: '#16A34A',
+              brandDark: '#1E293B',
+            },
+            fontFamily: {
+              sans: ['"Noto Sans"', '"Noto Sans Telugu"', '"Noto Sans Devanagari"', 'system-ui', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Google Fonts for English, Telugu and Hindi support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Sans+Telugu:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #f8fafc;
+        margin: 0;
+        padding: 0;
+        font-family: 'Noto Sans', 'Noto Sans Telugu', 'Noto Sans Devanagari', -apple-system, sans-serif;
+        -webkit-tap-highlight-color: transparent;
+      }
+      /* Waveform animation for speaking state */
+      @keyframes waveBar {
+        0%, 100% { height: 12px; }
+        50% { height: 44px; }
+      }
+      .animate-wave-1 { animation: waveBar 0.8s ease-in-out infinite 0.1s; }
+      .animate-wave-2 { animation: waveBar 0.8s ease-in-out infinite 0.25s; }
+      .animate-wave-3 { animation: waveBar 0.8s ease-in-out infinite 0.4s; }
+      .animate-wave-4 { animation: waveBar 0.8s ease-in-out infinite 0.2s; }
+      .animate-wave-5 { animation: waveBar 0.8s ease-in-out infinite 0.35s; }
+    </style>
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900 antialiased">
+    <div id="root" class="min-h-screen flex flex-col"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
